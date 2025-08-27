@@ -13,6 +13,8 @@ This project was developed as part of the PG-AGI AI/ML Intern Assignment. The pr
 * **Context-Aware Responses**: Maintains the conversational context, providing meaningful responses even when the user deviates from the expected input.
 * **Enhanced User Experience**: Features a custom-styled UI for a polished and professional look and feel.
 
+[Live Application](http://3.108.220.28:8501/)
+
 ***
 
 ## ✨ Project Highlights
@@ -20,7 +22,7 @@ This project was developed as part of the PG-AGI AI/ML Intern Assignment. The pr
 | Feature | Description |
 | :--- | :--- |
 | **Overall Highlight** | An intelligent hiring assistant that goes beyond simple scripts by understanding user intent and handling conversational detours gracefully. |
-| **Core Strength** | **Robustness & UX**. The hybrid model of a state machine and an intent-classifying LLM prevents the conversation from breaking, creating a smooth and resilient user experience. |
+| **Core Strength** | **Robustness & Intelligent**. The hybrid model of a state machine and an intent-classifying LLM prevents the conversation from breaking and handles the user inputs in a witty way, creating a smooth and resilient user experience. |
 | **Prompt Engineering** | Utilizes a multi-prompt strategy: an **intent classifier** to route user input, a **contextual prompter** to handle user questions, and a **generator prompt** for creating technical questions. |
 | **State Management** | Employs a deterministic **State Machine** (`STAGE_FLOW`) to guarantee the collection of all required candidate data in a specific order, managed via Streamlit's `session_state`. |
 | **UI/UX** | Features a custom-styled interface with a dynamic background and tailored chat bubbles to provide a professional and engaging user experience beyond default Streamlit. |
