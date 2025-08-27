@@ -27,8 +27,8 @@ To run this application locally, please follow the steps below.
 
 1.  **Clone the Repository**
     ```bash
-    git clone [https://github.com/your-username/talentscout-assistant.git](https://github.com/your-username/talentscout-assistant.git)
-    cd talentscout-assistant
+    git clone [https://github.com/ringerH/TalentScout_Hire_bot.git](https://github.com/ringerHTalentScout_Hire_bot.git)
+    cd TalentScout_Hire_bot
     ```
 
 2.  **Create a Virtual Environment**
@@ -62,7 +62,7 @@ To run this application locally, please follow the steps below.
     ```
     Add your Google Gemini API key to the `secrets.toml` file:
     ```toml
-    GOOGLE_API_KEY = "YOUR_API_KEY_HERE"
+    GOOGLE_API_KEY = "API_KEY"
     ```
 
 ***
@@ -87,11 +87,11 @@ To run this application locally, please follow the steps below.
 
 ## 🛠️ Technical Details
 
-* [cite_start]**Language**: Python [cite: 47]
-* [cite_start]**Frontend Framework**: Streamlit [cite: 51]
+* **Language**: Python 
+* **Frontend Framework**: Streamlit 
 * **Large Language Model**: Google Gemini (`gemini-1.5-flash`) accessed via the `google-generativeai` library.
 * **Architecture**:
-    [cite_start]The application follows a modular and scalable design[cite: 81]:
+    The application follows a modular and scalable design:
     * `app.py`: The main entry point that initializes the app and handles the chat loop.
     * `conversation.py`: Contains the core logic for processing user input, managing conversation state, and interacting with the LLM.
     * `config.py`: A centralized configuration file for prompts, conversation flow (`STAGE_FLOW`), and mappings, making the application easy to modify and extend.
@@ -102,7 +102,7 @@ To run this application locally, please follow the steps below.
 
 ## 🧠 Prompt Design
 
-[cite_start]The effectiveness of this chatbot relies on a multi-prompt strategy, where different prompts are designed for specific tasks[cite: 57, 58].
+The effectiveness of this chatbot relies on a multi-prompt strategy, where different prompts are designed for specific tasks.
 
 1.  **`INTENT_CLASSIFICATION_PROMPT`**: This prompt acts as a router. Instead of simply feeding user input to the main logic, it first asks the LLM to classify the user's intent as one of `ANSWER`, `QUESTION`, or `OFF-TOPIC`. This is crucial for deciding whether to proceed in the conversation flow or handle an interruption.
 
@@ -114,11 +114,8 @@ To run this application locally, please follow the steps below.
 
 ## 💡 Challenges & Solutions
 
-1.  **Challenge**: Maintaining a structured conversation flow while still feeling natural. [cite_start]A purely scripted bot is brittle, while a purely generative one can easily be sidetracked[cite: 14, 43].
+1.  **Challenge**: Maintaining a structured conversation flow while still feeling natural. A purely scripted bot is brittle, while a purely generative one can easily be sidetracked.
     * **Solution**: A hybrid model was implemented. A deterministic state machine (defined in `config.py`) ensures all necessary data points are collected in order. The LLM-based intent classification layer provides the flexibility to handle user questions and off-topic remarks without breaking the primary screening flow.
 
-2.  **Challenge**: The default Streamlit UI is functional but lacks a distinct visual identity suitable for a company like "TalentScout".
-    * **Solution**: Custom CSS was written in the `style.py` module to significantly enhance the UI. This includes a dynamic animated background, custom styling for user and assistant chat bubbles, and improved button aesthetics, addressing the "UI Enhancements" optional requirement.
-
-3.  **Challenge**: Preserving conversation history and candidate data across user interactions in Streamlit's script-rerun environment.
+2.  **Challenge**: Preserving conversation history and candidate data across user interactions in Streamlit's script-rerun environment.
     * **Solution**: Streamlit's `session_state` (`st.session_state`) was used to store the conversation history (`messages`), the current conversation stage (`stage`), and all collected candidate data (`candidate_info`). This ensures state is maintained reliably throughout a single user session.
