@@ -1,16 +1,16 @@
 # TalentScout Hiring Assistant 🤖
 
-TalentScout Hiring Assistant is an intelligent chatbot designed to streamline the initial screening process for technical candidates. Built with Python, Streamlit, and Google's Gemini LLM, this application gathers essential candidate information and dynamically generates relevant technical questions based on their declared technology stack.
+TalentScout Hiring Assistant is an intelligent and quite a witty chatbot designed to streamline the initial screening process for technical candidates. Built with Python, Streamlit, and gemini-1.5-flash, it gathers essential candidate information and dynamically generates relevant technical questions based on their declared technology stack. 
 
 ## 📋 Project Overview
 
-[cite_start]This project was developed as part of the PG-AGI AI/ML Intern Assignment[cite: 2]. [cite_start]The primary goal is to create a conversational AI that can conduct a preliminary screening interview[cite: 8]. [cite_start]The chatbot guides candidates through a structured conversation to collect key details [cite: 12] [cite_start]and then assesses their technical proficiency by generating tailored questions[cite: 13].
+This project was developed as part of the PG-AGI AI/ML Intern Assignment. The primary goal is to create a conversational AI that can conduct a preliminary screening interview. The chatbot guides candidates through a structured conversation to collect key details and then assesses their technical proficiency by generating tailored questions.
 
 ### Key Features
-* [cite_start]**Structured Information Gathering**: Collects candidate details like name, contact info, experience, and location in a predefined sequence[cite: 25, 26, 27, 28, 29, 31].
-* [cite_start]**Dynamic Question Generation**: Uses an LLM to generate relevant technical questions based on the candidate's specified tech stack[cite: 35, 36].
+* **Structured Information Gathering**: Collects candidate details like name, contact info, experience, and location in a predefined sequence.
+* **Dynamic Question Generation**: Uses an LLM to generate relevant technical questions based on the candidate's specified tech stack.
 * **Intent-Based Interaction**: Employs a sophisticated hybrid approach that uses an LLM to classify user intent, allowing the bot to handle off-script questions and answers gracefully.
-* [cite_start]**Context-Aware Responses**: Maintains the conversational context, providing meaningful responses even when the user deviates from the expected input[cite: 40, 42].
+* **Context-Aware Responses**: Maintains the conversational context, providing meaningful responses even when the user deviates from the expected input.
 * **Enhanced User Experience**: Features a custom-styled UI for a polished and professional look and feel.
 
 ***
