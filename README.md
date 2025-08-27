@@ -29,6 +29,7 @@ This project was developed as part of the PG-AGI AI/ML Intern Assignment. The pr
 | **Cloud Deployment** | Ready for production deployment on cloud services like **AWS EC2**, allowing for public accessibility and real-world application. |
 
 ***
+[Video Demo](https://www.loom.com/share/96976e6c28c54edd8bdfb0d604b23ee3?sid=97eebb87-7e79-47dd-9964-ad0fcbd3aece)
 
 ## 🚀 Local Installation
 
