@@ -98,67 +98,7 @@ To run this application on your local machine, please follow the steps below.
 
 ## ☁️ Cloud Deployment (AWS EC2)
 
-To deploy this application for public access, you can use an AWS EC2 instance.
-
-1.  **Launch an EC2 Instance**:
-    * In your AWS Console, launch a new EC2 instance.
-    * **AMI**: Choose **Ubuntu Server 22.04 LTS**.
-    * **Instance Type**: Select **t2.micro** (Free Tier eligible).
-    * **Key Pair**: Create and download a new `.pem` key pair. You'll need this to connect.
-    * **Security Group**: Create a rule to allow **SSH (port 22)** from your IP. Add a second rule to allow **Custom TCP on port 8501** from **Anywhere (0.0.0.0/0)**.
-
-2.  **Connect to Your Instance**:
-    Use SSH to connect to your instance. On your local machine, make your key read-only:
-    ```bash
-    chmod 400 your-key-name.pem
-    ssh -i /path/to/your-key-name.pem ubuntu@<Your-EC2-Public-IP>
-    ```
-
-3.  **Set Up the Server**:
-    Install Python, pip, venv, and Git.
-    ```bash
-    sudo apt update && sudo apt upgrade -y
-    sudo apt install python3-pip python3-venv git -y
-    ```
-
-4.  **Deploy the Code**:
-    Clone your repository onto the server.
-    ```bash
-    git clone [https://github.com/ringerH/TalentScout_Hire_bot.git](https://github.com/ringerH/TalentScout_Hire_bot.git)
-    cd TalentScout_Hire_bot
-    ```
-
-5.  **Install Dependencies**:
-    Create a virtual environment and install the required packages.
-    ```bash
-    python3 -m venv venv
-    source venv/bin/activate
-    pip install -r requirements.txt
-    ```
-
-6.  **Configure API Key on Server**:
-    Create the Streamlit secrets file on the EC2 instance.
-    ```bash
-    mkdir .streamlit
-    nano .streamlit/secrets.toml
-    ```
-    Add your `GOOGLE_API_KEY` to the file and save it (Ctrl+X, Y, Enter).
-
-7.  **Run the App Persistently with `tmux`**:
-    Install `tmux` to keep the app running after you disconnect.
-    ```bash
-    sudo apt install tmux -y
-    tmux new -s chatbot
-    ```
-    Inside the `tmux` session, activate the environment and run the app:
-    ```bash
-    source venv/bin/activate
-    streamlit run app.py --server.address=0.0.0.0
-    ```
-    Detach from the session by pressing **Ctrl+B**, then **D**.
-
-8.  **Access Your App**:
-    Your chatbot is now live at `http://<Your-EC2-Public-IP>:8501`.
+The application has been deployed for public access, using an AWS EC2 instance in Ubuntu t3.micro free-tier.
 
 ***
 
