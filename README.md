@@ -13,7 +13,7 @@ This project was developed as part of the PG-AGI AI/ML Intern Assignment. The pr
 * **Context-Aware Responses**: Maintains the conversational context, providing meaningful responses even when the user deviates from the expected input.
 * **Enhanced User Experience**: Features a custom-styled UI for a polished and professional look and feel.
 
-[Live Application](http://3.108.220.28:8501/)
+[Live Application](http://3.108.220.28:8501/)[Instance terminated]
 
 ***
 
@@ -96,7 +96,7 @@ To run this application on your local machine, please follow the steps below.
 
 ***
 
-## ☁️ Cloud Deployment (AWS EC2)
+## ☁️ Cloud Deployment (AWS EC2)[Instance Terminated]
 
 The application has been deployed for public access, using an AWS EC2 instance in Ubuntu t3.micro free-tier.
 
